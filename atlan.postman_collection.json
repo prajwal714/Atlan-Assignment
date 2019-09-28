@@ -1,0 +1,227 @@
+{
+	"info": {
+		"_postman_id": "503e83fd-6b71-4e0e-9838-2413d2d67552",
+		"name": "atlan",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:5000/api/login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\": \"prajwal\",\n\t\"password\": \"prajwal\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/api/login",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"login"
+					]
+				},
+				"description": "Login"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:5000/api/applypatch",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1hbnZpIiwicGFzc3dvcmQiOiIkMmIkMTAkMXpSVW9WaC4udjJHaVlVUGFxaUt5dTVvYjNzMUw3OWVwUElHSHVrOGphNVE3djNGSHg5ZzYiLCJpYXQiOjE1Njk2NzIyMzl9.qSrzg87clkdrlg-psH7gJTq8qRPd_bnwrDPvU3jtDlU",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"doc\": {\"foo\": \"'bar'\"}, \n\"patch\":{\"op\": \"replace\", \"path\": \"/foo\", \"value\": 1}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/api/applypatch",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"applypatch"
+					]
+				},
+				"description": "apply Patch"
+			},
+			"response": []
+		},
+		{
+			"name": "Image Resize",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1hbnZpIiwicGFzc3dvcmQiOiIkMmIkMTAkMXpSVW9WaC4udjJHaVlVUGFxaUt5dTVvYjNzMUw3OWVwUElHSHVrOGphNVE3djNGSHg5ZzYiLCJpYXQiOjE1Njk2NzIyMzl9.qSrzg87clkdrlg-psH7gJTq8qRPd_bnwrDPvU3jtDlU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"url\": \"https://images.pexels.com/photos/248797/pexels-photo-248797.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/api/imageResize",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"imageResize"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Apply Patch",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1hbnZpIiwicGFzc3dvcmQiOiIkMmIkMTAkMXpSVW9WaC4udjJHaVlVUGFxaUt5dTVvYjNzMUw3OWVwUElHSHVrOGphNVE3djNGSHg5ZzYiLCJpYXQiOjE1Njk2NzIyMzl9.qSrzg87clkdrlg-psH7gJTq8qRPd_bnwrDPvU3jtDlU",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"doc\": {\"foo\": \"'bar'\"}, \n\"patch\":{\"op\": \"replace\", \"path\": \"/foo\", \"value\": 1}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/api/applypatch",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"applypatch"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\": \"prajwal\",\n\t\"password\": \"prajwal\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/api/login",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login Test",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1hbnZpIiwicGFzc3dvcmQiOiIkMmIkMTAkMXpSVW9WaC4udjJHaVlVUGFxaUt5dTVvYjNzMUw3OWVwUElHSHVrOGphNVE3djNGSHg5ZzYiLCJpYXQiOjE1Njk2NzIyMzl9.qSrzg87clkdrlg-psH7gJTq8qRPd_bnwrDPvU3jtDlU",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:5000/api/logintest",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"logintest"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
