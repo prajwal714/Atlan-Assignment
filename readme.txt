@@ -1,0 +1,1 @@
+atlan.postman_collection.json file contains a set of API requests for testing purpose.
